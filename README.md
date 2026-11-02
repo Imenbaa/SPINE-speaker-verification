@@ -2,11 +2,6 @@
 
 Code for the method in the paper by I. Ben-Amor, M. Tahon, J.-F. Bonastre and N. Dugué.
 
-Related papers:
-
-- SPINE: SParse Interpretable Neural Embeddings ([pdf](https://arxiv.org/pdf/1711.08792.pdf))
-- Interpretable Neural Embedding with Sparse Words Self-Representation ([pdf](https://arxiv.org/pdf/2306.14135.pdf))
-
 ## Method
 
 | Stage | What it does | Code |
