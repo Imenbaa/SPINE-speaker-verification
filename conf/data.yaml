@@ -1,0 +1,9 @@
+# pytorch_lightning==1.8.1
+data:
+  class_path: DataModule.XvDataModule
+  init_args:
+    train_scp: path/to/voxceleb2_dev/xvectors.scp
+    val_scp: path/to/voxceleb1/xvectors.scp
+    predict_scp: path/to/voxceleb1/xvectors.scp
+    batch_size: 256
+    num_workers: 0

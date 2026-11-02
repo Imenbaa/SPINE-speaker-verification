@@ -1,0 +1,23 @@
+# pytorch_lightning==1.8.1
+model:
+  class_path: SPINE.SPINE
+  init_args:
+    encoder:
+      class_path: torch.nn.Linear
+      init_args:
+        in_features: 256
+        out_features: 500
+        bias: true
+    decoder:
+      class_path: torch.nn.Linear
+      init_args:
+        in_features: 500
+        out_features: 256
+        bias: true
+    sparsity: 0.85
+    std_noise: 0.2
+    r_lambda: 1.0
+    as_lambda: 1.0
+    ps_lambda: 1.0
+    binarize: False
+    binarization_threshold: 0.5
