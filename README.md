@@ -106,3 +106,7 @@ python explain.py embeddings.pickle descriptors.csv gender_labels.csv gender_exp
 ```
 
 Each dimension becomes a binary target with a threshold at 0.5. Descriptors are ranked by RF Gini, SHAP, stepwise LDA, and DISR, then grouped into families. The command prints each surrogate model's test accuracy; a ranking is only meaningful when that accuracy is well above 50%.
+
+## License
+
+This project is released under the [MIT License](LICENSE).
