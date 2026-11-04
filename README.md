@@ -1,6 +1,6 @@
 # Interpretable Sparse and Binary Representations for Speaker Verification
 
-Code for the method in the paper by I. Ben-Amor, M. Tahon, J.-F. Bonastre and N. Dugué.
+This code provides the method; numbers and dimension indices change with training and may differ from the paper by I. Ben-Amor, M. Tahon, J.-F. Bonastre and N. Dugué.
 
 ## Method
 
