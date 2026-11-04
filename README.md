@@ -10,16 +10,6 @@ Code for the method in the paper by I. Ben-Amor, M. Tahon, J.-F. Bonastre and N.
 | 2. Probing | Classifies gender and emotion from the embeddings, then ranks dimensions with RF Gini, SHAP, and stepwise LDA to select the ones linked to each task. | `Explainability/probe.py` |
 | 3. Explanation | Turns each selected dimension into a binary target and predicts it from eGeMAPS descriptors. RF Gini, SHAP, stepwise LDA, and DISR then show which descriptor families explain it. | `Explainability/explain.py` |
 
-### Differences from the paper's results
-
-This repository provides the method; it does not reproduce the paper's exact numbers. The original parameter values were not kept, so expect these differences:
-
-- **Scores and dimensions change with training.** Dimension numbers belong to one trained model, so the paper's F318, F481, and others do not carry over to a new run.
-- **Some settings are not from the paper.** Batch size, epochs, noise level, AdamW settings, and SVM settings were chosen for this code.
-- **Noise and loss scaling are specific to this code.** Noise is added to the reconstruction target, and losses average over dimensions rather than summing as in the paper's equations.
-- **Part of the explainability code was rewritten.** Stepwise LDA and DISR were reimplemented from their definitions, because the original modules were lost.
-- **The evaluation protocol differs from the original analyses.** The scripts threshold at 0.5, sample classes at random, and keep speakers or sessions apart between train and test. The original analyses used `!= 0`, kept the first N rows of each class, and split utterances at random.
-
 ## Installation
 
 Tested with Python 3.10:
@@ -42,7 +32,7 @@ Each run writes `exemples/voxceleb/model_dir/xvectors/<folder_name>/xvectors.scp
 
 | Key | X-vectors |
 |---|---|
-| `train_scp` | VoxCeleb-2 dev |
+| `train_scp` | VoxCeleb-2 |
 | `val_scp` | VoxCeleb-1 |
 | `predict_scp` | VoxCeleb-1 |
 
